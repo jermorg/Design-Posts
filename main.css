@@ -1,0 +1,337 @@
+:root{
+	--color: #00FF8A;
+	--fbgcolor: #25282D;
+	--ligthBgColor: #2B2E35;
+	--perple: #EF709B;
+	--borderR: 5px;
+	--bodybgcol: #1A1B1D;
+	--greyColor: #505050;
+}
+
+*
+{
+transition: 0.4s;
+margin: 0;
+}
+
+a
+{
+text-decoration: none;
+color: #fff;
+}
+
+body
+{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background: var(--bodybgcol);
+width: 100vw;
+height: 100vh;
+}
+
+.wrapper
+{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+}
+
+header
+{
+width: 85px;
+
+display: flex;
+flex-direction: column;
+background: var(--fbgcolor);
+justify-content: space-between;
+padding: 20px 0px;
+}
+
+header img
+{
+transition: 0.7s;
+width: 37px;
+}
+
+.logo
+{
+width: 60px;
+height: 60px;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+border-radius: var(--borderR);
+background: var(--color);
+}
+
+.menu-nav
+{
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.menu
+{
+margin: 10px 0px;
+
+width: 50px;
+height: 50px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: var(--greyColor);
+border-radius: var(--borderR);
+
+position: relative;
+}
+
+.in-page
+{
+background: var(--color);
+}
+
+.menu:hover
+{
+background: #828282;
+}
+
+.in-page:hover
+{
+background: var(--color);
+}
+
+.menu span,
+.logo span,
+.accaunt span
+{
+position: absolute;
+left: 160%;
+font-size: 24px;
+font-weight: 600;
+padding: 5px;
+border-radius: var(--borderR);
+background: var(--color);
+color: #111;
+background: #fff;
+transition: 0.5s;
+z-index: 100;
+
+opacity: 0;
+visibility: hidden;
+}
+
+.menu span::before,
+.logo span::before,
+.accaunt span::before
+{
+content: '';
+position: absolute;
+width: 12px;
+height: 12px;
+background: #fff;
+left: -10px;
+top: 46%;
+transform: rotate(45deg) translateY(-50%);
+z-index: -1;
+}
+
+.menu:hover span,
+.logo:hover span,
+.accaunt:hover span
+{
+opacity: 1;
+visibility: visible;
+}
+
+.accaunt
+{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+
+border-radius: var(--borderR);
+background: var(--color);
+width: 50px;
+height: 50px;
+margin: 0 auto;
+}
+
+.accaunt img
+{
+width: 44px;
+height: 44px;
+border-radius: var(--borderR);
+}
+
+/*-----container-----*/
+
+.container
+{
+width: calc(100% - 85px);
+}
+
+.container .content
+{
+width: calc(90% - 30px);
+height: calc(100% - 90px);
+background: var(--fbgcolor);
+margin: 0px auto;
+margin-top: 60px;
+border-radius: 10px 10px 0px 0px;
+position: relative;
+padding: 15px;
+}
+
+.container .content h1
+{
+color: #787878;
+}
+
+.container .content hr
+{
+margin: 10px auto;
+background: var(--color);
+width: 70%;
+height: 1px;
+border: 0;
+}
+
+.add-post
+{
+position: absolute;
+font-size: 45px;
+font-weight: 600;
+color: #fff;
+padding: 0px 12px;
+border-radius: 50%;
+left: -30px;
+top: -30px;
+background: var(--perple);
+box-shadow: 0 15px 25px rgb(0 0 0 / 15%);
+}
+
+.context-post
+{
+display: flex;
+flex-direction: column-reverse;
+}
+
+.context-post .post
+{
+margin: 10px 0px;
+padding: 15px;
+border-radius: var(--borderR);
+background: var(--ligthBgColor);
+}
+
+.header-post
+{
+font-size: 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.three-curcle
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.three-curcle div
+{
+width: 10px;
+height: 10px;
+background: #fff;
+margin: 0px 5px;
+border-radius: 50%;
+}
+
+.details
+{
+margin: 10px 0px;
+color: #878787;
+font-size: 24px;
+}
+
+.details .title
+{
+margin: 10px 0px;
+font-size: 30px;
+color: #BABABA;
+}
+
+.more-info
+{
+width: calc(100% - 10px);
+padding: 5px;
+font-size: 19px;
+color: var(--greyColor);
+border-top: 1px solid var(--greyColor);
+border-bottom: 1px solid var(--greyColor);
+}
+
+.more-info:hover
+{
+background: var(--greyColor);
+color: gray;
+}
+
+.form-reaction
+{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin: 10px 0px;
+}
+
+.reaction
+{
+margin: 0px 5px;
+color: #fff;
+font-size: 20px;
+background: #525252;
+padding: 3px;
+border-radius: var(--borderR);
+}
+
+.reaction:first-child
+{
+margin-left: 0;
+}
+
+.react
+{
+background: var(--color);
+color: #333;
+}
+
+#nick
+{
+color: #6D6D6D;
+}
+
+#curcle
+{
+color: var(--color);
+}
+
+#janr
+{
+color: #606769;
+}
+
+#data
+{
+color: #525252;
+}
